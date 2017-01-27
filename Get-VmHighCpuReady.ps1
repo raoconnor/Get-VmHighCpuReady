@@ -56,8 +56,8 @@ $date = Get-Date ($initalTime) -uformat %Y%m%d
 $time = Get-Date ($initalTime) -uformat %H%M
 
 Write-Host "---------------------------------------------------------" -ForegroundColor DarkYellow
-Write-Host "Output will be saved to:"  								   -ForegroundColor Yellow
-Write-Host $filepath$filename-$date$time".csv"  					   -ForegroundColor White
+Write-Host "Output will be saved to:"  			   		-ForegroundColor Yellow
+Write-Host $filepath$filename-$date$time".csv"  			-ForegroundColor White
 Write-Host "---------------------------------------------------------" -ForegroundColor DarkYellow
 
 # Create empty results array to hold values
