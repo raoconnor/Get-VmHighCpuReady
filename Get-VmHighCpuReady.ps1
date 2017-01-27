@@ -10,7 +10,7 @@ Single vm or all vms in a cluster can be checked
 	russ 05/01/2016
 	
 .Acknowledgments 
- The absolutely brilliant Jason Coleman - http://http://virtuallyjason.blogspot.com.es/
+ The absolutely brilliant Jason Coleman - http://virtuallyjason.blogspot.com.es/
     
 .Example
     ./Get-VmHighCpuReady
