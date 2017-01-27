@@ -23,7 +23,6 @@ Single vm or all vms in a cluster can be checked
 Multiple outputs are generated if the vm passed the threshold value multiple times 
 It reports when each VM experienced the load 
 
-
 Set value for [Ready] Threshold (only values above this are collected) - set at 19.9%
 Set value to 3 days -  this take into account vCenter stats roll up
 	vCenter > administration > statistics Interval Duration 5 Minutes = 3 Days
@@ -81,18 +80,16 @@ if ($vm -eq " "){
 	Write-Output " "  
 	Write-host "please wait for script to finish, it may take a while...." -ForegroundColor Yellow
 	$cluster = get-cluster $cluster[$choice] 
-	$vms = Get-cluster $cluster | Get-VM
-	
-	
+	$vms = Get-cluster $cluster | Get-VM	
 }
 
 else{
 $vms = Get-VM -name $VM
 }
 
+
 # Set start time
 $start = (Get-Date).AddDays(-$Days)
-
 
 # Outer loop - iterates $vms
 foreach ($vm in $vms)
@@ -125,3 +122,5 @@ $resultsarray | Out-GridView
 # export to csv 
 # $resultsarray| Export-csv C:\vSpherePowerCLI\Output\vmCpuPeak.csv -notypeinformation
 $resultsarray | Export-Csv $filepath$filename"-"$cluster"-"$date$time".csv" -NoType
+
+
