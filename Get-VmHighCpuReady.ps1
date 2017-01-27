@@ -43,8 +43,9 @@ param (
 [string]$metric = "cpu.ready.summation"
 )
 
-Write-host "this script identifies any VM that has CPU Ready metrics above a threshold"
-Write-host "to run on single vm cancel and execute ./Get-VmHighCpuReady <vm>"
+Write-host "`n"
+Write-host "This script identifies any VM that has CPU Ready metrics above $Threshold% during $Days days"  -ForegroundColor White 
+Write-host "to run on single vm cancel and execute ./Get-VmHighCpuReady -VM <vm> `n" -ForegroundColor White
 
 # Set file path, filename, date and time
 # This is my standard path, you should adjust as needed
